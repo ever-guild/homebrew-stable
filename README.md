@@ -13,3 +13,4 @@ Homebrew — The Missing Package Manager for macOS or Linux or Windows 10 Subsys
     brew tap tonsoft/stable
     brew install tonos-cli
     brew install ton-sdk
+    brew install tvm-linker
