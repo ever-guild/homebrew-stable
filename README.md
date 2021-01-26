@@ -1,4 +1,6 @@
-# TON Homebrew tap
+# Free TON Homebrew tap
+
+It is Homebrew tap for simple and convenient distribution of software for work and development on the Free TON network.
 
 Homebrew — The Missing Package Manager for macOS or Linux or Windows 10 Subsystem for Linux, see more on the project website [brew.sh](https://docs.brew.sh/Installation).
 
