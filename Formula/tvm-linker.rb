@@ -14,7 +14,7 @@ class TvmLinker < Formula
     cd "tvm_linker" do
         system "cargo test --release -- --nocapture --test-threads=1"
         system "cargo build --release"
-        bin.install "target/release/tvm_linker" => "tvm-linke"
+        bin.install "target/release/tvm_linker" => "tvm-linker"
     end
   end
 
