@@ -3,7 +3,7 @@ class TonosCli < Formula
   homepage "https://github.com/tonlabs/tonos-cli"
   license "Apache-2.0"
   url "https://github.com/tonlabs/tonos-cli.git",
-    :tag => "v0.1.27",
+    :tag => "v0.2.0",
     :using => :git
   head "https://github.com/tonlabs/tonos-cli.git",
     :using => :git
