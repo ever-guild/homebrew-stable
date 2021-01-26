@@ -1,6 +1,6 @@
 # TON Homebrew tap
 
-Homebrew — The Missing Package Manager for macOS or Linux, see more on the project website [brew.sh](https://brew.sh/).
+Homebrew — The Missing Package Manager for macOS or Linux or Windows 10 Subsystem for Linux, see more on the project website [brew.sh](https://docs.brew.sh/Installation).
 
 ## FAQ
 
