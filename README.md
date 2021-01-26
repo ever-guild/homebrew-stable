@@ -1,5 +1,5 @@
 # TON Homebrew tap
 
-    brew tap tonlabs/stable
+    brew tap tonsoft/stable
     brew install tonos-cli
     brew install ton-sdk
