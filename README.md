@@ -14,3 +14,20 @@ Homebrew — The Missing Package Manager for macOS or Linux or Windows 10 Subsys
     brew install tonos-cli
     brew install ton-sdk
     brew install tvm-linker
+
+## Develop
+
+### New Formula
+
+Create new a formula:
+
+    nameFormula=new-tool
+
+See `brew create --help`
+
+    brew create --autotools --set-name $nameFormula https://github.com/users/repo/archive/version.tar.gz
+    mv $(brew --repository)/Library/Taps/homebrew/homebrew-core/Formula/$nameFormula.rb ./Formula/$nameFormula.rb
+
+Edit if need and test installation:
+
+    brew install --verbose $(pwd)/Formula/$nameFormula.rb
