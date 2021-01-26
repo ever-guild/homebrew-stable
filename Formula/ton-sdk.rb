@@ -3,7 +3,7 @@ class TonSdk < Formula
   homepage "https://github.com/tonlabs/TON-SDK"
   license "Apache-2.0"
   url "https://github.com/tonlabs/TON-SDK.git",
-    :tag => "1.3.0",
+    :tag => "1.5.2",
     :using => :git
   head "https://github.com/tonlabs/TON-SDK.git",
     :using => :git
