@@ -13,11 +13,12 @@ class TvmLinker < Formula
   def install
     cd "tvm_linker" do
         system "cargo test --release -- --nocapture --test-threads=1"
-        system "cargo", "install", *std_cargo_args
+        system "cargo build --release"
+        bin.install "target/release/tvm_linker" => "tvm-linke"
     end
   end
 
   test do
-    system "#{bin}/tvm_linker", "--version"
+    system "tvm-linker", "--version"
   end
 end
