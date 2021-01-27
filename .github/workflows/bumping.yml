@@ -1,0 +1,19 @@
+name: Bumping
+
+on:
+  schedule:
+    # Every 12 hours
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  bump:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bump formulae
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+          tap: ${{github.repository}}
+          livecheck: true

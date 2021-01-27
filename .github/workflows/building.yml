@@ -1,0 +1,46 @@
+name: Building
+
+on:
+  pull_request:
+    paths:
+      - 'Formula/*'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        id: setup
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Cache gems
+        uses: actions/cache@v1
+        with:
+          path: ${{steps.setup.outputs.gems-path}}
+          key: ${{runner.os}}-rubygems-${{steps.setup.outputs.gems-hash}}
+          restore-keys: ${{runner.os}}-rubygems-
+      - name: Install gems
+        run: brew install-bundler-gems
+      - name: Check formulae
+        run: brew test-bot --only-tap-syntax
+  build:
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{matrix.os}}
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Build bottles
+        run: |
+          brew test-bot --only-cleanup-before
+          brew test-bot --only-formulae --skip-recursive-dependents
+      - name: Upload bottles
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: bottles
+          path: '*.bottle.*'
