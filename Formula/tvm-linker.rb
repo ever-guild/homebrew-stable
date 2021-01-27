@@ -7,6 +7,13 @@ class TvmLinker < Formula
   license "Apache-2.0"
   head "https://github.com/tonlabs/TVM-linker.git"
 
+  bottle do
+    root_url "https://github.com/tonsoft/homebrew-stable/releases/download/tvm-linker-2001271811"
+    cellar :any_skip_relocation
+    sha256 "dd85e257e1389020e1228e43a6460027004dc094c5880c6e8af691de878e1ecb" => :catalina
+    sha256 "42125087a57be248595746581e4ccf047b678a4263cde71d0ff38878a3721886" => :x86_64_linux
+  end
+
   depends_on "rust" => :build
 
   def install
