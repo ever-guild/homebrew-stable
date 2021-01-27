@@ -7,7 +7,7 @@ on:
 
 jobs:
   upload:
-    if: contains(github.event.pull_request.labels.*.name, 'ok')
+    if: contains(github.event.pull_request.labels.*.name, 'bottle')
     runs-on: ubuntu-latest
     steps:
       - name: Set up Homebrew

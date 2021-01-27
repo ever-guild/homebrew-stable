@@ -27,10 +27,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-    runs-on: ${{matrix.os}}
+        platform:
+          - { on: ubuntu-20.04, name: linux }
+          - { on: macos-11.0, name: big sur }
+          - { on: macos-10.15, name: catalina }
+    runs-on: ${{ matrix.platform.on }}
+    name: ${{ matrix.platform.name }}
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
