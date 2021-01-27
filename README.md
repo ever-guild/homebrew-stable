@@ -26,7 +26,6 @@ Tap a formula repository:
 Install software:
 
     brew install tonos-cli
-    brew install ton-sdk
     brew install tvm-solc
     brew install tvm-linker
 
