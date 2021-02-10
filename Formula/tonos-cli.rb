@@ -2,8 +2,8 @@ class TonosCli < Formula
   desc "Command-line tool for TON OS"
   homepage "https://github.com/tonlabs/tonos-cli"
   url "https://github.com/tonlabs/tonos-cli.git",
-      tag:      "v0.3.0",
-      revision: "caf485841bb66bea8adade7f196ce19707cc6529"
+      tag:      "v0.5.0",
+      revision: "67ac6c085cd9fec3ba5d71da75e6c843bf856bad"
   license "Apache-2.0"
   head "https://github.com/tonlabs/tonos-cli.git"
 
