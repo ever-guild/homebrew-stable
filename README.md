@@ -29,8 +29,6 @@ Install software:
     brew install tvm-solc
     brew install tvm-linker
 
-> Due to the lack of a stable tag for `tvm-linker`, at current moment used tag from fork see [ISSUE#2](https://github.com/tonsoft/homebrew-stable/issues/2).
-
 ### Upgrade
 
     brew upgrade
@@ -49,11 +47,10 @@ For help see `brew create --help` and [Formula Cookbook](https://docs.brew.sh/Fo
 ### Edit if need and testing
 
     code $(brew --repository tonsoft/stable)/Formula/new-formula-name.rb
-    brew style tonsoft/stable
-    brew audit --tap=tonsoft/stable
-    brew install new-formula-name
+    brew test-bot --tap=tonsoft/stable --only-tap-syntax
+    brew install --verbose ton-compiler
 
-### Create PR 
+### Create PR
 
     cd $(brew --repository tonsoft/stable)
     git remote add self fork
