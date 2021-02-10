@@ -1,9 +1,9 @@
 class TvmLinker < Formula
   desc "TVM assembly source code of TON smart contract, compiles it and links its parts"
   homepage "https://github.com/tonlabs/TVM-linker"
-  url "https://github.com/tonsoft/TVM-linker.git",
-      tag:      "v0.2.1-head-2001271811",
-      revision: "11f66ec619656b74d146116ada27b11ceedde658"
+  url "https://github.com/tonlabs/TVM-linker.git",
+      revision: "977a0aa61ef100b6b221123fc44ab0f30b47cc84"
+  version "210210.0829"
   license "Apache-2.0"
   head "https://github.com/tonlabs/TVM-linker.git"
 
