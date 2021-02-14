@@ -16,6 +16,8 @@ jobs:
         uses: Homebrew/actions/git-user-config@master
       - name: Pull bottles
         env:
+          HOMEBREW_GIT_NAME: BrewTestBot
+          HOMEBREW_GIT_EMAIL: 'homebrew-test-bot@lists.sfconservancy.org'
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
           PR: ${{github.event.pull_request.number}}
           WORKFLOW: building.yml

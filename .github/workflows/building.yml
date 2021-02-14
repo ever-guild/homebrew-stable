@@ -35,14 +35,30 @@ jobs:
     name: ${{ matrix.platform.name }}
     steps:
       - name: Set up Homebrew
+        id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Cache Homebrew Bundler RubyGems
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+
+      - name: Install Homebrew Bundler RubyGems
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems
+
       - name: Build bottles
         run: |
-          brew test-bot --only-cleanup-before
-          brew test-bot --only-formulae --skip-recursive-dependents
+          brew test-bot --verbose --debug --only-cleanup-before
+          brew test-bot --verbose --debug --only-setup
+          brew test-bot --verbose --debug --only-formulae
+
       - name: Upload bottles
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: bottles
           path: '*.bottle.*'
