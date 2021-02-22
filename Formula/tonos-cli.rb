@@ -2,8 +2,8 @@ class TonosCli < Formula
   desc "Command-line tool for TON OS"
   homepage "https://github.com/tonlabs/tonos-cli"
   url "https://github.com/tonlabs/tonos-cli.git",
-      tag:      "v0.5.0",
-      revision: "67ac6c085cd9fec3ba5d71da75e6c843bf856bad"
+      tag:      "v0.6.0",
+      revision: "49e78c7c616b693b3ee06b62bb5bc136258c761b"
   license "Apache-2.0"
   head "https://github.com/tonlabs/tonos-cli.git"
 
@@ -14,14 +14,14 @@ class TonosCli < Formula
   end
 
   depends_on "rust" => :build
-  depends_on "openssl"
+  depends_on "openssl@1.1"
 
   def install
     system "cargo", "install", *std_cargo_args
   end
 
   test do
-    output = shell_output("#{bin}/tonos-cli --version")
+    output = shell_output("tonos-cli --version")
     assert_match @version.to_s, output
   end
 end
