@@ -28,6 +28,7 @@ Install software:
     brew install tonos-cli
     brew install tvm-solc
     brew install tvm-linker
+    brew install ton-sdk
 
 ### Upgrade
 
