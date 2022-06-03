@@ -2,16 +2,11 @@ class TvmLinker < Formula
   desc "TVM assembly source code of TON smart contract, compiles it and links its parts"
   homepage "https://github.com/tonlabs/TVM-linker"
   url "https://github.com/tonlabs/TVM-linker.git",
-      revision: "977a0aa61ef100b6b221123fc44ab0f30b47cc84"
+      tag:      "0.15.31"
+      revision: "e5223277d65e8b3813dc812b27d92ba762ec9104"
   version "210210.0829"
   license "Apache-2.0"
   head "https://github.com/tonlabs/TVM-linker.git"
-
-  bottle do
-    root_url "https://github.com/EverscaleGuild/homebrew-stable/releases/download/tvm-linker-210210.0829"
-    sha256 cellar: :any_skip_relocation, catalina:     "bf28d100b45803fb357429d53aa9fd504a489071540d75218507a125fcae6a51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "664e6677bd8cf01a77eb9100299304bce56a65760b35a095d9027d73bf3a3a15"
-  end
 
   depends_on "rust" => :build
 
