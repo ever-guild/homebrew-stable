@@ -8,7 +8,7 @@ class TvmSolc < Formula
   head "https://github.com/tonlabs/TON-Solidity-Compiler.git"
 
   bottle do
-    root_url "https://github.com/tonsoft/homebrew-stable/releases/download/tvm-solc-0.25"
+    root_url "https://github.com/EverscaleGuild/homebrew-stable/releases/download/tvm-solc-0.25"
     cellar :any_skip_relocation
     sha256 "53636577c99f1caf4e71630049c7e691086b6d06170509d6641659e18fccbfee" => :catalina
     sha256 "cbc242d25a30f927fb5b3beb74dc26b75de44d135e4aae0eeb31acad7852fcbf" => :x86_64_linux

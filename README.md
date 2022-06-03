@@ -1,4 +1,4 @@
-# Free TON Homebrew tap
+# Everscale Guild Homebrew tap
 
 It is Homebrew tap for simple and convenient distribution of software for work and development on the Free TON network.
 
@@ -21,7 +21,7 @@ Binary bottles are currently available only for:
 
 Tap a formula repository:
 
-    brew tap tonsoft/stable
+    brew tap EverscaleGuild/stable
 
 Install software:
 
@@ -42,17 +42,17 @@ Install software:
 
 For help see `brew create --help` and [Formula Cookbook](https://docs.brew.sh/Formula-Cookbook).
 
-    brew create --tap tonsoft/stable --set-name new-formula-name URL
+    brew create --tap EverscaleGuild/stable --set-name new-formula-name URL
 
 ### Edit if need and testing
 
-    code $(brew --repository tonsoft/stable)/Formula/new-formula-name.rb
-    brew test-bot --tap=tonsoft/stable --only-tap-syntax
+    code $(brew --repository EverscaleGuild/stable)/Formula/new-formula-name.rb
+    brew test-bot --tap=EverscaleGuild/stable --only-tap-syntax
     brew install --verbose ton-compiler
 
 ### Create PR
 
-    cd $(brew --repository tonsoft/stable)
+    cd $(brew --repository EverscaleGuild/stable)
     git remote add self fork
     git checkout -b add-new-formula-name
     git add Formula/new-formula-name.rb

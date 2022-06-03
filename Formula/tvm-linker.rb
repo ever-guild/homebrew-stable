@@ -8,7 +8,7 @@ class TvmLinker < Formula
   head "https://github.com/tonlabs/TVM-linker.git"
 
   bottle do
-    root_url "https://github.com/tonsoft/homebrew-stable/releases/download/tvm-linker-210210.0829"
+    root_url "https://github.com/EverscaleGuild/homebrew-stable/releases/download/tvm-linker-210210.0829"
     sha256 cellar: :any_skip_relocation, catalina:     "bf28d100b45803fb357429d53aa9fd504a489071540d75218507a125fcae6a51"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "664e6677bd8cf01a77eb9100299304bce56a65760b35a095d9027d73bf3a3a15"
   end

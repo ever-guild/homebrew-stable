@@ -8,7 +8,7 @@ class TonosCli < Formula
   head "https://github.com/tonlabs/tonos-cli.git"
 
   bottle do
-    root_url "https://github.com/tonsoft/homebrew-stable/releases/download/tonos-cli-0.6.0"
+    root_url "https://github.com/EverscaleGuild/homebrew-stable/releases/download/tonos-cli-0.6.0"
     sha256 cellar: :any_skip_relocation, catalina:     "16d8784f1b82355e484c1c7f4a02376748b8993dc85d35f990a14b7d60c50e74"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "0a72945e2807aeb82bed5cfa2b238839d6c0fbd4604767b61992220d39b8f57e"
   end
