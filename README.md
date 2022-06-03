@@ -25,7 +25,7 @@ Tap a formula repository:
 
 Install software:
 
-    brew install tonos-cli
+    brew install everos-cli
     brew install tvm-solc
     brew install tvm-linker
 
